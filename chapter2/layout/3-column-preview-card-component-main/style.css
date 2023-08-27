@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 65%;
+  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+.d1 {
+  width: 100%;
+  height: 100%;
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.d1 img {
+  width: 50px;
+}
+
+.d1 h1 {
+  font-size: 30px;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulder Display", sans-serif;
+}
+
+.d1 p {
+  line-height: 25px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.d1 button {
+  padding: 10px 0;
+  width: 50%;
+  border-radius: 8px;
+  border: 0;
+  background-color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+.d1:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+}
+.d1:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.d1:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.d1:nth-child(1) button {
+  color: hsl(31, 77%, 52%);
+}
+.d1:nth-child(2) button {
+  color: hsl(184, 100%, 22%);
+}
+.d1:nth-child(3) button {
+  color: hsl(179, 100%, 13%);
+}
