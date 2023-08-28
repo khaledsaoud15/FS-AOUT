@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  width: 55%;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.hero {
+  width: 40%;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 40px;
+  height: 100%;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+
+.content h1 {
+  font-size: 20px;
+  color: hsl(217, 19%, 35%);
+}
+
+.content p {
+  color: hsl(212, 23%, 69%);
+  font-size: 14px;
+}
+
+.av-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.date {
+  margin-right: auto;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.date h2 {
+  font-size: 16px;
+  color: hsl(217, 19%, 35%);
+}
+
+.date span {
+  opacity: 0.8;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(212, 212, 212);
+}
+
+.arr {
+  width: 18px;
+}
+
+.pop-up {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  width: 180px;
+  padding: 5px 15px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(212, 212, 212);
+  position: absolute;
+  top: -130%;
+  left: -160%;
+}
+
+.pop-up img {
+  width: 15px;
+  height: 15px;
+}
+
+.pop-up h4 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+.arrow:hover .pop-up {
+  display: flex;
+}
+
+.arrow:hover .arr {
+  fill: #fff !important;
+}
