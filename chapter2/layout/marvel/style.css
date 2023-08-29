@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: #202020;
+  color: #fff;
+}
+
+.logo {
+  width: 10%;
+  height: 100%;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #f2f2f2b6;
+  height: 50%;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.slash {
+  position: relative;
+}
+
+.slash::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -8px;
+  width: 2px;
+  height: 15px;
+  background-color: #ccc;
+}
+
+.top-left img {
+  width: 20px;
+  height: 20px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  padding: 0 0 0 20px;
+}
+
+.top-right img {
+  width: 30px;
+  height: 30px;
+}
+
+.subs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.subs h1 {
+  font-size: 12px;
+}
+
+.subs span {
+  font-size: 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+}
+
+.search img {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bottom-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  justify-content: space-around;
+  padding: 0 90px;
+}
+
+.overlay {
+  background-image: url(images/portrait_uncanny.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: blur(15px);
+  position: absolute;
+  background-position: 50% 15%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+  margin-right: auto;
+  color: #fff;
+}
+
+.effect {
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.effect::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 45px;
+  width: 2px;
+  height: 25px;
+  background-color: gold;
+  rotate: 30deg;
+}
+.effect::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  width: 2px;
+  height: 25px;
+  background-color: gold;
+  rotate: 30deg;
+}
+
+.content h1 {
+  margin: 15px 0;
+  font-size: 35px;
+  width: 80%;
+}
+
+.content span {
+  margin: 0 0 15px 0;
+  line-height: 25px;
+}
+
+.content button {
+  width: 30%;
+  padding: 20px 0;
+  background-color: red;
+  color: #fff;
+  /* position: relative; */
+  border: none;
+  clip-path: polygon(30% 0, 100% 0, 100% 45%, 70% 100%, 0 100%, 0 45%);
+}
+
+.hero {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: auto;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -7%;
+  width: 30px;
+  height: 20px;
+  background-color: #000;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -12%;
+  width: 20px;
+  height: 350px;
+  background-color: #000;
+}
