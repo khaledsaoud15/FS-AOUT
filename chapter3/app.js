@@ -320,8 +320,8 @@ function numiricArray(arr) {
   return arr;
 }
 
-console.log(numiricArray(["a", "b", "c"]));
-console.log(numiricArray(["a", "b", "c", "e", "f", "g"]));
+// console.log(numiricArray(["a", "b", "c"]));
+// console.log(numiricArray(["a", "b", "c", "e", "f", "g"]));
 
 function switchandSort(arr) {
   let alph = [];
@@ -346,7 +346,7 @@ function switchandSort(arr) {
   return [...alph, ...num];
 }
 
-console.log(switchandSort(["e", 5, 3, 1, "a", "b", "5"]));
+// console.log(switchandSort(["e", 5, 3, 1, "a", "b", "5"]));
 
 // check if pangram
 
@@ -363,7 +363,7 @@ function pangram(word) {
   return "this sentence is not a pangram";
 }
 
-console.log(pangram("The quick brown fox jumps over the lazy dog"));
+// console.log(pangram("The quick brown fox jumps over the lazy dog"));
 
 /* // you are a farmer you need to save your sheeps from the wolf
 // you have an array as an input but be carefull it starts from right to left
@@ -382,9 +382,9 @@ function sheep(queu) {
   return "oi! sheep number " + s + " you are goin to be eaten by the wolf";
 }
 
-console.log(sheep(["sheep", "sheep", "sheep", "wolf"]));
-console.log(sheep(["sheep", "sheep", "sheep", "sheep"]));
-console.log(sheep(["sheep", "sheep", "wolf", "sheep", "sheep"]));
+// console.log(sheep(["sheep", "sheep", "sheep", "wolf"]));
+// console.log(sheep(["sheep", "sheep", "sheep", "sheep"]));
+// console.log(sheep(["sheep", "sheep", "wolf", "sheep", "sheep"]));
 
 /* 
 Trolls are attacking your comment section!
@@ -410,7 +410,7 @@ function removeVowls(vowl) {
   return res.join("");
 }
 
-console.log(removeVowls("This website is for losers LOL!"));
+// console.log(removeVowls("This website is for losers LOL!"));
 
 /*
 
@@ -437,7 +437,7 @@ function findLongest(a, b) {
   return finsalRes;
 }
 
-console.log(findLongest("qksjdbvlqksjbvlqksjb", "mqsjmbqjbmkjqfmkbqm"));
+// console.log(findLongest("qksjdbvlqksjbvlqksjb", "mqsjmbqjbmkjqfmkbqm"));
 
 /* 
 Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
@@ -453,5 +453,172 @@ function num7(arr) {
   return "there is no number 7";
 }
 
-console.log(num7(["78", 8547, 52, 1, 6]));
-console.log(num7(["8", 854, 52, 1, 6]));
+// console.log(num7(["78", 8547, 52, 1, 6]));
+// console.log(num7(["8", 854, 52, 1, 6]));
+
+/*
+  Create a function that takes a sentence and returns the number of letters in this sentence sorted alphabetically.
+Output format:
+letter:count space letter:count (see examples).
+Special cases:
+space is NOT a letter!
+special symbols like ($ & * @ ! ' @') is NOT a letter!
+lower and upper letters IS EQUAL (A == a, B == b ... Z == z)!
+*/
+
+function countLetters(str) {
+  str = str.toUpperCase();
+  let b;
+  let tab = [];
+  let res = "";
+  str = str.split(" ");
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < str[i].length; j++) {
+      b = str[i][j].toLowerCase();
+      if (b !== str[i][j]) {
+        tab.push(str[i][j]);
+      }
+    }
+  }
+
+  tab = tab.sort();
+  let index = 1;
+  for (let k = 0; k < tab.length; k++) {
+    if (tab[k] == tab[k + 1]) {
+      index++;
+    } else {
+      res += tab[k] + ":" + index + " ";
+      index = 1;
+    }
+  }
+
+  return res.toLowerCase();
+}
+
+// console.log(countLetters("hello Worldd §&"));
+
+// Objects
+
+const obj = {
+  name: "khaled",
+  email: "khaledsaoud@gmail.com",
+};
+
+const obj2 = obj;
+
+obj2.name = "rafik";
+
+obj.country = "algeria";
+
+console.log(obj);
+console.log(obj2);
+
+delete obj.country;
+
+console.log(obj);
+
+console.log(obj2);
+
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+};
+
+function getMAxSkilledUser(users) {
+  let maxUser;
+  let maxUserObj;
+  let count = 0;
+  for (u in users) {
+    if (users[u].skills.length > count) {
+      count = users[u].skills.length;
+      maxUser = u;
+      maxUserObj = users[u];
+    }
+  }
+
+  return {
+    maxUser,
+    maxUserObj,
+  };
+}
+
+console.log(getMAxSkilledUser(users));
+
+function setUserName(name, user, users) {
+  users[name] = user;
+  return users;
+}
+
+const myData = {
+  email: "khaledsaoud@gmail.com",
+  skills: ["HTML", "CSS", "JavaScript", "MongoDB", "Express", "React", "Node"],
+  age: 22,
+  isLoggedIn: true,
+  points: 100,
+};
+
+console.log(setUserName("khaled", myData, users));
