@@ -510,14 +510,14 @@ obj2.name = "rafik";
 
 obj.country = "algeria";
 
-console.log(obj);
-console.log(obj2);
+// console.log(obj);
+// console.log(obj2);
 
 delete obj.country;
 
-console.log(obj);
+// console.log(obj);
 
-console.log(obj2);
+// console.log(obj2);
 
 const users = {
   Alex: {
@@ -606,7 +606,7 @@ function getMAxSkilledUser(users) {
   };
 }
 
-console.log(getMAxSkilledUser(users));
+// console.log(getMAxSkilledUser(users));
 
 function setUserName(name, user, users) {
   users[name] = user;
@@ -621,4 +621,213 @@ const myData = {
   points: 100,
 };
 
-console.log(setUserName("khaled", myData, users));
+// console.log(setUserName("khaled", myData, users));
+
+// Get all keys and values
+
+// console.log(Object.keys(users));
+// console.log(Object.values(users));
+// console.log(Object.entries(users));
+
+const usersArr = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
+  },
+];
+
+function register(usersArr, user) {
+  for (let i = 0; i < usersArr.length; i++) {
+    if (usersArr[i].email === user.email) {
+      return {
+        status: "User already Exists please Login",
+      };
+    }
+  }
+
+  const newUser = {
+    _id: Math.random().toString(36).substring(2, 8),
+    username: user.username,
+    email: user.email,
+    password: user.password,
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
+  };
+  usersArr.push(newUser);
+  return usersArr;
+}
+
+const newUser = {
+  username: "khaled",
+  email: "khaledsaoud@gmail.com",
+  password: "*************",
+};
+
+console.log(register(usersArr, newUser));
+console.log(register(usersArr, newUser));
+
+// ES6
+const arrowFunction = () => {
+  const arr1 = [1, 2, 3, 4, 5, 6];
+  const arr2 = [7, 8, 9, 10];
+  const finalArr = [...arr1, ...arr2];
+  console.log(finalArr);
+};
+
+arrowFunction();
+
+const user = {
+  name: "Khalil",
+  age: 30,
+  email: "khalil@gmail.com",
+  password: "khalil123",
+};
+
+const { password, ...rest } = user;
+
+console.log(rest);
+
+// Array Methods
+
+const list = ["potato", "tomato", 5, 7];
+
+list.forEach((a) => {
+  if (typeof a === "string") {
+    console.log(a);
+  }
+});
+
+// console.log(secondArr);
+
+console.log(list);
+
+list.splice(0, 1);
+console.log(list);
+
+const registerUser = (arr, u) => {
+  const findUser = arr.find((f) => f.email === u.email);
+  if (findUser) {
+    return {
+      message: "User Exist please login",
+    };
+  }
+
+  const newUser = {
+    id: Math.random().toString(36).substr(2, 8),
+    username: u.username,
+    email: u.email,
+    password: u.password,
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: true,
+  };
+
+  arr.push(newUser);
+
+  return arr;
+};
+
+const rafik = {
+  username: "rafik",
+  email: "rafik@gmail.com",
+  password: "***********",
+};
+
+console.log(registerUser(usersArr, rafik));
+console.log(registerUser(usersArr, rafik));
+
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
+
+const rateProduct = (products, Product_id, user_id, rating) => {
+  const singleProduct = products.find((p) => p._id === Product_id);
+  const rate = singleProduct.ratings.find((d) => d.userId === user_id);
+
+  if (rate) {
+    rate.rate = rating;
+  } else {
+    singleProduct.ratings.push({ userId: user_id, rate: rating });
+  }
+
+  return products;
+};
+
+// console.log(rateProduct(products, "aegfal", "ghderc", 4.5));
+// console.log(rateProduct(products, "aegfal", "ghderc", 3));
+// console.log(rateProduct(products, "aegfal", "ab12ex", 5));
+// console.log(rateProduct(products, "aegfal", "ab12ex", 1.4));
+// console.log(rateProduct(products, "hedfcg", "fg12cy", 1.4));
+
+const likeProduct = (products, product_id, userid) => {
+  const Product = products.find((p) => p._id === product_id);
+  const like = Product.likes.find((him) => him === userid);
+  if (like) {
+    Product.likes = Product.likes.filter((userId) => userId != userid);
+  } else Product.likes.push(userid);
+
+  return products;
+};
+
+console.log(likeProduct(products, "hedfcg", "fg12cy"));

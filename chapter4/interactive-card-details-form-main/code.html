@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="top-Img">
+          <img src="images/bg-card-front.png" alt="" />
+          <div class="circle-white"></div>
+          <div class="circle"></div>
+          <h1 class="card-number">0000 0000 0000 0000</h1>
+          <div class="user">
+            <h2 class="user-id">Khaled saoud</h2>
+            <p class="date">00/00</p>
+          </div>
+        </div>
+        <div class="bottom-img">
+          <img src="images/bg-card-back.png" alt="" />
+          <p class="cvc">000</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="input">
+          <h1>CARDHOLDER NAME</h1>
+          <input type="text" class="username" placeholder="eg:khaled saoud" />
+        </div>
+        <div class="input">
+          <h1>CARD NUMBER</h1>
+          <input
+            type="text"
+            class="card-input-number"
+            placeholder="0000 0000 0000 0000"
+          />
+        </div>
+        <div class="input">
+          <div class="l-input">
+            <h1>EXP. DATE (MM/YY)</h1>
+            <div class="ex-input">
+              <input type="text" class="month" placeholder="MM" />
+              <input type="text" class="year" placeholder="YY" />
+            </div>
+          </div>
+          <div class="r-input">
+            <h1>CVC</h1>
+            <input type="text" class="cvc-input" placeholder="e.g:123" />
+          </div>
+        </div>
+        <button>Confirm</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
