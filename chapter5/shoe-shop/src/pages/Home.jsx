@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Products from "../components/Products";
 
 const Home = (props) => {
-  console.log(props);
   return (
     <div>
       <Header />

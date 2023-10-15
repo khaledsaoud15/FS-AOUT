@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import cart from "../images/cart.png";
+import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
   const [active, setActive] = useState(false);
@@ -11,14 +12,18 @@ const Navbar = (props) => {
       <Media>
         <Pop className="cart-pop" active={active}>
           <Links>
-            <a href="">Home</a>
+            <NavLink to="/">
+              <a>Home</a>
+            </NavLink>
             <a href="">About</a>
             <a href="">Contact</a>
             <a href="">Blog</a>
             <a href="">Support</a>
           </Links>
           <Basket>
-            <img src={cart} alt="" />
+            <NavLink to="/cart">
+              <img src={cart} alt="" />
+            </NavLink>
             <p>{props.cart.length}</p>
           </Basket>
         </Pop>
